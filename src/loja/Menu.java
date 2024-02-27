@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 import conta.util.CoresLoja;
 import loja.controller.LojaController;
+import loja.model.Produto;
+import loja.model.ProdutoBanho;
+import loja.model.ProdutoRacao;
 
 public class Menu {
 
@@ -15,6 +18,11 @@ public class Menu {
 		
 		Scanner leia = new Scanner(System.in);
 
+		ProdutoBanho Banho1 = new ProdutoBanho (produto.gerarNumero(),1, "Banho&Tosa", 80.0f, "PetzDog");
+		produto.cadastrar(Banho1);
+		ProdutoRacao Racao2 = new ProdutoRacao (produto.gerarNumero(),2, "Natural One", 80.0f, "Premier");
+		produto.cadastrar(Racao2);
+		
 		int opcao = 0;
 
 		while (true) {

@@ -1,6 +1,6 @@
 package loja.model;
 
-public class Produto {
+public abstract class  Produto {
 
 	// variáveis - características de uma conta
 	private int id;
