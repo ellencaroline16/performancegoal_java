@@ -5,11 +5,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import conta.util.CoresLoja;
+import loja.controller.LojaController;
 
 public class Menu {
 
 	public static void main(String[] args) {
 
+		LojaController produto = new LojaController();
+		
 		Scanner leia = new Scanner(System.in);
 
 		int opcao = 0;
@@ -56,7 +59,7 @@ public class Menu {
 				break;
 			case 2:
 				System.out.println(CoresLoja.TEXT_BLACK_BOLD + "Listar todas os produtos\n\n");
-
+				produto.listarTodos();
 				keyPress();
 				break;
 			case 3:
